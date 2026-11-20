@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Build Hub | Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar md:navbar-expand bg-1 border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">PC Build Hub</a>
+
+            <button class="btn navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#navDrawer"
+                aria-label="Open navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <dialog class="drawer drawer-end" id="navDrawer"
+                aria-labelledby="drawerTitle">
+
+                <div class="drawer-header">
+                    <p class="drawer-title" id="drawerTitle">Menu</p>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="drawer" aria-label="Close">
+                    </button>
+                </div>
+
+                <div class="drawer-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#components">Components</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </dialog>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+
+        <h1>PC Build Hub</h1>
+        <p>Explore the essential components of a gaming PC and learn how to build your own computer.</p>
+
+        <!-- Carousel -->
+
+        <div id="pcCarousel" class="carousel carousel-overlay slide">
+
+            <div class="carousel-inner rounded-3">
+
+                <div class="carousel-item active">
+                    <img src="images/gaming-pc.jpg"
+                        class="d-block w-100 ratio-21x9 object-fit-cover"
+                        alt="Custom-built gaming desktop PC">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/graphics-card.jpg"
+                        class="d-block w-100 ratio-21x9 object-fit-cover"
+                        alt="Dedicated graphics card for PC gaming">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/pc-components.jpg"
+                        class="d-block w-100 ratio-21x9 object-fit-cover"
+                        alt="Computer hardware components for a custom build">
+                </div>
+
+            </div>
+
+            <div class="carousel-overlay-controls">
+
+                <button class="btn-icon btn-subtle theme-secondary"
+                    type="button" data-bs-target="#pcCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-icon-prev" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="btn-icon btn-subtle theme-secondary"
+                    type="button" data-bs-target="#pcCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-icon-next" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Component Gallery -->
+
+        <h2 id="components" class="mt-5 mb-3">Explore PC Components</h2>
+
+        <div class="row g-4">
+
+            <!-- Card 1: CPU -->
+
+            <div class="col-12 md:col-6 lg:col-4">
+                <div class="card h-100">
+
+                    <img src="images/cpu.jpg"
+                        class="card-img-top ratio-16x9 object-fit-cover"
+                        alt="Desktop computer processor">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Processor (CPU)</h3>
+                        <p>The processor handles instructions and performs calculations for your computer.</p>
+
+                        <div class="accordion">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Details</summary>
+                                <div class="accordion-body">
+                                    Consider core count, clock speed and motherboard compatibility when choosing a CPU.
+                                </div>
+                            </details>
+                        </div>
+
+                        <button class="btn-solid theme-primary mt-3"
+                            type="button" data-bs-toggle="dialog"
+                            data-bs-target="#cpuDialog">
+                            Learn More
+                        </button>
+
+                        <dialog class="dialog" id="cpuDialog"
+                            aria-labelledby="cpuTitle">
+                            <div class="dialog-header">
+                                <h4 class="dialog-title" id="cpuTitle">Choosing a CPU</h4>
+                            </div>
+                            <div class="dialog-body">
+                                AMD Ryzen and Intel Core processors offer different performance options for gaming and productivity.
+                            </div>
+                            <div class="dialog-footer">
+                                <button class="btn-solid theme-primary"
+                                    type="button" data-bs-dismiss="dialog">
+                                    Close
+                                </button>
+                            </div>
+                        </dialog>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: GPU -->
+
+            <div class="col-12 md:col-6 lg:col-4">
+                <div class="card h-100">
+
+                    <img src="images/graphics-card.jpg"
+                        class="card-img-top ratio-16x9 object-fit-cover"
+                        alt="Dedicated desktop graphics card">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Graphics Card (GPU)</h3>
+                        <p>The graphics card renders images and delivers smooth gaming performance.</p>
+
+                        <div class="accordion">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Details</summary>
+                                <div class="accordion-body">
+                                    Graphics cards differ in performance, video memory and power consumption.
+                                </div>
+                            </details>
+                        </div>
+
+                        <button class="btn-solid theme-primary mt-3"
+                            type="button" data-bs-toggle="dialog"
+                            data-bs-target="#gpuDialog">
+                            Learn More
+                        </button>
+
+                        <dialog class="dialog" id="gpuDialog"
+                            aria-labelledby="gpuTitle">
+                            <div class="dialog-header">
+                                <h4 class="dialog-title" id="gpuTitle">Choosing a GPU</h4>
+                            </div>
+                            <div class="dialog-body">
+                                Choose a graphics card based on your monitor resolution, desired frame rate and budget.
+                            </div>
+                            <div class="dialog-footer">
+                                <button class="btn-solid theme-primary"
+                                    type="button" data-bs-dismiss="dialog">
+                                    Close
+                                </button>
+                            </div>
+                        </dialog>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Motherboard -->
+
+            <div class="col-12 md:col-6 lg:col-4">
+                <div class="card h-100">
+
+                    <img src="images/motherboard.jpg"
+                        class="card-img-top ratio-16x9 object-fit-cover"
+                        alt="Computer motherboard with expansion slots">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Motherboard</h3>
+                        <p>The motherboard connects all the major components of your computer.</p>
+
+                        <div class="accordion">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Details</summary>
+                                <div class="accordion-body">
+                                    Motherboards come in different sizes and support specific processor sockets and memory types.
+                                </div>
+                            </details>
+                        </div>
+
+                        <button class="btn-solid theme-primary mt-3"
+                            type="button" data-bs-toggle="dialog"
+                            data-bs-target="#motherboardDialog">
+                            Learn More
+                        </button>
+
+                        <dialog class="dialog" id="motherboardDialog"
+                            aria-labelledby="motherboardTitle">
+                            <div class="dialog-header">
+                                <h4 class="dialog-title" id="motherboardTitle">Choosing a Motherboard</h4>
+                            </div>
+                            <div class="dialog-body">
+                                Make sure your motherboard supports your processor, RAM, storage devices and case size.
+                            </div>
+                            <div class="dialog-footer">
+                                <button class="btn-solid theme-primary"
+                                    type="button" data-bs-dismiss="dialog">
+                                    Close
+                                </button>
+                            </div>
+                        </dialog>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: RAM -->
+
+            <div class="col-12 md:col-6 lg:col-4">
+                <div class="card h-100">
+
+                    <img src="images/ram.jpg"
+                        class="card-img-top ratio-16x9 object-fit-cover"
+                        alt="Desktop computer RAM modules">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Memory (RAM)</h3>
+                        <p>RAM temporarily stores data that your computer is actively using.</p>
+
+                        <div class="accordion">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Details</summary>
+                                <div class="accordion-body">
+                                    Memory capacity and speed can affect multitasking and gaming performance.
+                                </div>
+                            </details>
+                        </div>
+
+                        <button class="btn-solid theme-primary mt-3"
+                            type="button" data-bs-toggle="dialog"
+                            data-bs-target="#ramDialog">
+                            Learn More
+                        </button>
+
+                        <dialog class="dialog" id="ramDialog"
+                            aria-labelledby="ramTitle">
+                            <div class="dialog-header">
+                                <h4 class="dialog-title" id="ramTitle">Choosing RAM</h4>
+                            </div>
+                            <div class="dialog-body">
+                                Between 16GB and 32GB of RAM is a practical choice for most modern gaming computers.
+                            </div>
+                            <div class="dialog-footer">
+                                <button class="btn-solid theme-primary"
+                                    type="button" data-bs-dismiss="dialog">
+                                    Close
+                                </button>
+                            </div>
+                        </dialog>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Storage -->
+
+            <div class="col-12 md:col-6 lg:col-4">
+                <div class="card h-100">
+
+                    <img src="images/ssd.jpg"
+                        class="card-img-top ratio-16x9 object-fit-cover"
+                        alt="Solid-state drive for computer storage">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Storage (SSD)</h3>
+                        <p>Storage devices hold your operating system, games and personal files.</p>
+
+                        <div class="accordion">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Details</summary>
+                                <div class="accordion-body">
+                                    SSDs provide faster loading times than traditional mechanical hard drives.
+                                </div>
+                            </details>
+                        </div>
+
+                        <button class="btn-solid theme-primary mt-3"
+                            type="button" data-bs-toggle="dialog"
+                            data-bs-target="#ssdDialog">
+                            Learn More
+                        </button>
+
+                        <dialog class="dialog" id="ssdDialog"
+                            aria-labelledby="ssdTitle">
+                            <div class="dialog-header">
+                                <h4 class="dialog-title" id="ssdTitle">Choosing Storage</h4>
+                            </div>
+                            <div class="dialog-body">
+                                A 1TB NVMe SSD provides a useful starting point for storing games and everyday applications.
+                            </div>
+                            <div class="dialog-footer">
+                                <button class="btn-solid theme-primary"
+                                    type="button" data-bs-dismiss="dialog">
+                                    Close
+                                </button>
+                            </div>
+                        </dialog>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Power Supply -->
+
+            <div class="col-12 md:col-6 lg:col-4">
+                <div class="card h-100">
+
+                    <img src="images/psu.jpg"
+                        class="card-img-top ratio-16x9 object-fit-cover"
+                        alt="Desktop computer power supply unit">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Power Supply (PSU)</h3>
+                        <p>The power supply delivers electricity to the internal components of your PC.</p>
+
+                        <div class="accordion">
+                            <details class="accordion-item">
+                                <summary class="accordion-header">Details</summary>
+                                <div class="accordion-body">
+                                    Power supplies vary in wattage, efficiency ratings and cable configurations.
+                                </div>
+                            </details>
+                        </div>
+
+                        <button class="btn-solid theme-primary mt-3"
+                            type="button" data-bs-toggle="dialog"
+                            data-bs-target="#psuDialog">
+                            Learn More
+                        </button>
+
+                        <dialog class="dialog" id="psuDialog"
+                            aria-labelledby="psuTitle">
+                            <div class="dialog-header">
+                                <h4 class="dialog-title" id="psuTitle">Choosing a Power Supply</h4>
+                            </div>
+                            <div class="dialog-body">
+                                Select a reliable power supply with enough wattage to support all your components.
+                            </div>
+                            <div class="dialog-footer">
+                                <button class="btn-solid theme-primary"
+                                    type="button" data-bs-dismiss="dialog">
+                                    Close
+                                </button>
+                            </div>
+                        </dialog>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-1 border-top text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2026 PC Build Hub. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
